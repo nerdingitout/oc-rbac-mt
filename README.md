@@ -86,3 +86,9 @@ You will be redirected to a new page, search in the external registry for ```ibm
 ![pods added](https://user-images.githubusercontent.com/36239840/97107632-fe031680-16e1-11eb-87ab-63f00b50de1c.JPG)
 
 ## Switching to Another User
+Now let's stop the impersonation for User first-user, and switch to User second-user and verify if we can see the Pods User first-user created.
+As expected, we cannot see Project my-first-project anymore as User second-user is not authorized to view Project my-first-project.
+![second user pods](https://user-images.githubusercontent.com/36239840/97107793-d496ba80-16e2-11eb-8ca8-71bf673a7b8d.JPG)
+
+## Summary
+This marks the end of the tutorial in which you have demonstrated how multi-tenancy can be achieved using OpenShift Role Based Access Control and limiting Users to their specific Projects (namespaces).
