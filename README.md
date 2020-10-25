@@ -54,3 +54,16 @@ If you go to <b>Home &#8594; Projects</b>, you will notice that the user can't v
 ![first user pods](https://user-images.githubusercontent.com/36239840/97105576-4e27ac00-16d5-11eb-8e2c-50921f432312.png)
 
 
+## Create Role Bindings
+In this step, we will create role bindings to give users access to their respective projects. First, switch back to Admin user if you are still impersonating click on 'Stop Impersonating' that's shown at the top in the Impersonating User message.<br>
+![stop impersonating](https://user-images.githubusercontent.com/36239840/97105732-ad39f080-16d6-11eb-8751-dea4a7155e99.JPG)
+We can easily create Role Bindings through the web console. First, go to  <b>User Management &#8594; Role Bindings</b> then click 'Create Binding', it will redirect you to 'Create Role Binding' page with a form that looks like in the following picture. Fill in the form the following information:<br>
+Binding Type: Namespace Role Binding (RoleBinding)<br>
+Name: first-user-rb<br>
+Namespace: my-first-project<br>
+Role Name: cluster-admin<br>
+Subject: User<br>
+Subject Name: first-user<br>
+![first user rb](https://user-images.githubusercontent.com/36239840/97106206-a5c81680-16d9-11eb-8de0-e359dddfb825.JPG)
+
+
