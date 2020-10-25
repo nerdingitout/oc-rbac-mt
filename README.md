@@ -1,4 +1,4 @@
-# oc-rbac-mt
+# Role Based Access Control and Multi-tenancy on Red Hat OpenShift
 Tutorial - OpenShift Role Based Access Control &amp; Multi-Tenancy
 
 # Content
