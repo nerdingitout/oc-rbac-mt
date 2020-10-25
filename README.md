@@ -19,7 +19,7 @@ In this tutorial we will attempt to use Role Bases Access Control (RBAC) to limi
 ## Log in and Create Porject
 First, go to the web console and click on your username at the top left then 'Copy Login Command', then display the token and copy the ```oc login``` command in your terminal.<br>
 ![login](https://user-images.githubusercontent.com/36239840/97104809-26821500-16d0-11eb-936e-c2b7fb914523.JPG)
-Next, we will create two projects for the two users we will be creating in the next step, copy the following commands in your terminal.<br>
+<br>Next, we will create two projects for the two users we will be creating in the next step, copy the following commands in your terminal.<br>
 ```
 oc create namespace my-first-project
 ```
@@ -65,5 +65,24 @@ We can easily create Role Bindings through the web console. First, go to  <b>Use
 <b>Subject:</b> User<br>
 <b>Subject Name:</b> first-user<br>
 ![first user rb](https://user-images.githubusercontent.com/36239840/97106206-a5c81680-16d9-11eb-8de0-e359dddfb825.JPG)
+<br>Go to <b>User Management &#8594; Users</b> then click on 'first-user' and go to Role Bindings. You will find the role 'cluster-admin' has been successfully associated with 'first-user' through 'first-user-rb' RoleBinding for the namepspace 'my-first-project'.
+![first user details](https://user-images.githubusercontent.com/36239840/97106556-df9a1c80-16db-11eb-9a80-ce1a55edc7d1.JPG)
+## Impersonate User & Deploy Application
+In this step, we will impersonate first-user like we did previously, but this time, the user will have admin permisisons to my-first-project, which means they can do everything an admin can do on that namespace. Go to <b>User Management &#8594; Users</b> and click 'Impersonate User "first-user"'. You will notice the new changes for the user, and now the user can view the 'my-first-project' namespace as shown in the screenshot below. It is the only project this user can view because we limited first-user to my-first-project namespace<br>
+![first user project 1](https://user-images.githubusercontent.com/36239840/97106921-d6aa4a80-16dd-11eb-92d9-f80e4386d396.JPG)
+<br>If you go to <b>Workloads &#8594; Pods</b> you will see that first-user has access to the pods as well, but no pods have been created yet.<br>
+![pods first user 1](https://user-images.githubusercontent.com/36239840/97107127-4a008c00-16df-11eb-8a51-c0184c2ba031.JPG)
 
+## Create & Deploy Pod
+In this step, we will create a pod as 'first-user' in 'my-first-project' namespace. First, switch to the Developer Perspective on the web console and from the topology create a new application from 'Container Image' as shown in the screenshot.<br>
+![topology](https://user-images.githubusercontent.com/36239840/97107189-b11e4080-16df-11eb-934d-8002722d31e0.JPG)
+You will be redirected to a new page, search in the external registry for ```ibmcom/guestbook:v1``` image, keep the default settings as is and click 'Create'
+![ibmimagedeploy](https://user-images.githubusercontent.com/36239840/97107249-00647100-16e0-11eb-9fea-7a1fc2cee04d.JPG)
+<br>Once created, you will be redirected to the topology view which will show the pod as the following image. Notice that the light blue circle around the pod will turn dark blue once it successfully builds. As 'first-user' you can successfully deploy a containerized application (guestbook:v1) in Project 'my-first-project' and can view the Pods & Deployment resources associated with the application.<br>
+![pod topology](https://user-images.githubusercontent.com/36239840/97107327-618c4480-16e0-11eb-9631-b556382fa513.JPG)
+<br>You can access the deployed application by clicking on the small square at the top corner of the pod, which will open a new page for you that looks like the following.<br>
+![guest book url](https://user-images.githubusercontent.com/36239840/97107463-263e4580-16e1-11eb-9091-7e6793bac6f8.JPG)
+<br>If you switch back to the Administrator perspective, you will notice that the new pod has been added to the list of pods for the project 'my-first-project'.<br>
+![pods added](https://user-images.githubusercontent.com/36239840/97107632-fe031680-16e1-11eb-87ab-63f00b50de1c.JPG)
 
+## Switching to Another User
