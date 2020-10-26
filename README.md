@@ -2,7 +2,7 @@
 Tutorial - OpenShift Role Based Access Control &amp; Multi-Tenancy
 
 # Content
-- Prerequisites
+- [Prerequisites](https://github.com/nerdingitout/oc-rbac-mt/blob/main/README.md#prerequisities)
 - Overview
 - Login and Create Project
 - Create Users
