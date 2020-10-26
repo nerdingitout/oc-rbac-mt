@@ -1,23 +1,23 @@
 # Role-based Access Control and Multi-tenancy on Red Hat OpenShift
 Tutorial - OpenShift Role Based Access Control &amp; Multi-Tenancy
 
-## Content
-- [Prerequisites](https://github.com/nerdingitout/oc-rbac-mt/blob/main/README.md#prerequisities)
-- [Overview](https://github.com/nerdingitout/oc-rbac-mt#overview)
+## Introduction
+This tutorial will show you how to use Role Bases Access Control (RBAC) to limit certain users to specific project (namespaces) and ensure their workloads are isolated from other users. Users are only entitiled to view and manage resources to which they are authorized using Role Bindings. Their resources & views are separated from other users on the same OpenShift cluster using the same set of shared HW resources. Therefore, multi-tenancy can be achieved using OpenShift Container Platform RBAC and Role Binding.
+
+## Prerequisities
+For this tutorial you will need:<br>
+- Red Hat OpenShift Cluster 4.3 on IBM Cloud.<br>
+- oc CLI (can be downloaded from this <a href="https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.3/">link</a>.<br>
+## Estimated Time
+It will take you around 30 minutes to complete this tutorial.
+
+## Steps
 - [Login and Create Project](https://github.com/nerdingitout/oc-rbac-mt#login-and-create-porject)
 - [Create Users](https://github.com/nerdingitout/oc-rbac-mt#create-users)
 - [Impersonate Users](https://github.com/nerdingitout/oc-rbac-mt#impersonate-users)
 - [Create Role Bindings](https://github.com/nerdingitout/oc-rbac-mt#create-role-bindings)
 - [Create & Deploy Pod](https://github.com/nerdingitout/oc-rbac-mt#create--deploy-pod)
 - [Switching to Another User](https://github.com/nerdingitout/oc-rbac-mt#switching-to-another-user)
-- [Summary](https://github.com/nerdingitout/oc-rbac-mt#summary)
-
-## Prerequisities
-For this tutorial you will need:<br>
-- Red Hat OpenShift Cluster 4.3 on IBM Cloud.<br>
-- oc CLI (can be downloaded from this <a href="https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.3/">link</a>.<br>
-## Overview
-This tutorial will show you how to use Role Bases Access Control (RBAC) to limit certain users to specific project (namespaces) and ensure their workloads are isolated from other users. Users are only entitiled to view and manage resources to which they are authorized using Role Bindings. Their resources & views are separated from other users on the same OpenShift cluster using the same set of shared HW resources. Therefore, multi-tenancy can be achieved using OpenShift Container Platform RBAC and Role Binding.
 
 ## Login and Create Porject
 First, go to the web console and click on your username at the top left then 'Copy Login Command', then display the token and copy the ```oc login``` command in your terminal.<br>
