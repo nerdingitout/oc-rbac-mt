@@ -4,10 +4,13 @@ Tutorial - OpenShift Role Based Access Control &amp; Multi-Tenancy
 # Content
 - Prerequisites
 - Overview
-- Create Project
+- Login and Create Project
 - Create Users
+- Impersonate Users
 - Create Role Bindings
-- Create Pod
+- Create & Deploy Pod
+- Switching to Another User
+- Summary
 
 # Prerequisities
 For this tutorial you will need:<br>
@@ -16,7 +19,7 @@ For this tutorial you will need:<br>
 ## Overview
 In this tutorial we will attempt to use Role Bases Access Control (RBAC) to limit certain users to specific project (namespaces) and ensure their workloads are isolated from other users. Users are only entitiled to view and manage resources to which they are authorized using Role Bindings. Their resources & views are separated from other users on the same OpenShift cluster using the same set of shared HW resources. Therefore, we can achieve multi-tenancy using OpenShift Container Platform RBAC and Role Binding.
 
-## Log in and Create Porject
+## Login and Create Porject
 First, go to the web console and click on your username at the top left then 'Copy Login Command', then display the token and copy the ```oc login``` command in your terminal.<br>
 ![login](https://user-images.githubusercontent.com/36239840/97104809-26821500-16d0-11eb-936e-c2b7fb914523.JPG)
 <br>Next, we will create two projects for the two users we will be creating in the next step, copy the following commands in your terminal.<br>
