@@ -95,4 +95,4 @@ As expected,second-user cannot see Project my-first-project anymore as they are 
 ![second user pods](https://user-images.githubusercontent.com/36239840/97107793-d496ba80-16e2-11eb-8ca8-71bf673a7b8d.JPG)
 
 ## Summary
-This marks the end of the tutorial in which you have demonstrated how multi-tenancy can be achieved using OpenShift Role Based Access Control and limiting Users to their specific Projects (namespaces).
+In this tutorial, you learned what Role Based Access Control is and how it can be achieved along with multitenancy. This tutorial demonstrated how to manage users, grant them different permissions to different projects and workloads and impersonate other users to perform different tasks.
