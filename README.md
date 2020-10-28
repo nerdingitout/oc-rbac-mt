@@ -8,7 +8,7 @@ This tutorial will show you how to use Role Bases Access Control (RBAC) to limit
 ## Prerequisities
 For this tutorial you will need:<br>
 - Red Hat OpenShift Cluster 4.3 on IBM Cloud.<br>
-- oc CLI (can be downloaded from this <a href="https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.3/">link</a>.<br>
+- oc CLI (can be downloaded from this <a href="https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.3/">link</a> or you can use it at <a href="http://shell.cloud.ibm.com/">http://shell.cloud.ibm.com/.<br>
 ## Estimated Time
 It will take you around 30 minutes to complete this tutorial.
 
