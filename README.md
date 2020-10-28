@@ -13,14 +13,14 @@ For this tutorial you will need:<br>
 It will take you around 30 minutes to complete this tutorial.
 
 ## Steps
-- [Login and Create Project](https://github.com/nerdingitout/oc-rbac-mt#login-and-create-porject)
+- [Login and Create Project](https://github.com/nerdingitout/oc-rbac-mt#login-and-create-project)
 - [Create Users](https://github.com/nerdingitout/oc-rbac-mt#create-users)
 - [Impersonate Users](https://github.com/nerdingitout/oc-rbac-mt#impersonate-users)
 - [Create Role Bindings](https://github.com/nerdingitout/oc-rbac-mt#create-role-bindings)
 - [Create & Deploy Pod](https://github.com/nerdingitout/oc-rbac-mt#create--deploy-pod)
 - [Switching to Another User](https://github.com/nerdingitout/oc-rbac-mt#switching-to-another-user)
 
-## Login and Create Porject
+## Login and Create Project
 First, go to the web console and click on your username at the top left then 'Copy Login Command', then display the token and copy the ```oc login``` command in your terminal.<br>
 ![login](https://user-images.githubusercontent.com/36239840/97104809-26821500-16d0-11eb-936e-c2b7fb914523.JPG)
 <br>Next, create two projects for the two users you will be creating in the next step, copy the following commands in your terminal.<br>
