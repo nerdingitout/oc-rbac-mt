@@ -21,7 +21,7 @@ It will take you around 30 minutes to complete this tutorial.
 - [Switching to Another User](https://github.com/nerdingitout/oc-rbac-mt#switching-to-another-user)
 
 ## Login and Create Project
-First, go to the web console and click on your username at the top left then 'Copy Login Command', then display the token and copy the ```oc login``` command in your terminal.<br>
+First, go to the web console and click on your username at the top right then 'Copy Login Command', then display the token and copy the ```oc login``` command in your terminal.<br>
 ![login](https://user-images.githubusercontent.com/36239840/97104809-26821500-16d0-11eb-936e-c2b7fb914523.JPG)
 <br>Next, create two projects for the two users you will be creating in the next step, copy the following commands in your terminal.<br>
 ```
