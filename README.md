@@ -5,7 +5,7 @@ Tutorial - OpenShift Role Based Access Control &amp; Multi-Tenancy
 Role-based Access Control (RBAC) is a method of restricting access based on the roles of the users in the cluster, where each individual have the rights to access the resources they need.<br>
 This tutorial will show you how to use Role Bases Access Control (RBAC) to limit certain users to specific project (namespaces) and ensure their workloads are isolated from other users. Users are only entitiled to view and manage resources to which they are authorized using Role Bindings. Their resources & views are separated from other users on the same OpenShift cluster using the same set of shared HW resources. Therefore, multi-tenancy can be achieved using OpenShift Container Platform RBAC and Role Binding. A Role Binding grants the permissions defined in a role to a user or a group. A Role Binding grants permissions on a project scope, while Cluster Role Binding grants permissions on a cluster level.
 
-## Prerequisities
+## Prerequisites
 For this tutorial you will need:<br>
 - Red Hat OpenShift Cluster 4.3 on IBM Cloud.<br>
 - oc CLI (can be downloaded from this <a href="https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.3/">link</a> or you can use it at <a href="http://shell.cloud.ibm.com/">http://shell.cloud.ibm.com/.<br>
